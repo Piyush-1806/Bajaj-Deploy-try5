@@ -142,7 +142,10 @@ app = FastAPI(
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc",
-    lifespan=lifespan
+    lifespan=lifespan,
+    # Increase timeouts for Railway
+    openapi_prefix="",  # Required for Railway
+    root_path="",  # Required for Railway
 )
 
 # CORS middleware for web access
