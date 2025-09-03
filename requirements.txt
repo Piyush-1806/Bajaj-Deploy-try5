@@ -5,7 +5,7 @@ gunicorn>=21.2.0
 pydantic>=2.0.0
 python-multipart>=0.0.6
 
-# HTTP and async dependencies  
+# HTTP and async dependencies
 httpx>=0.25.2
 
 # Document processing
@@ -14,17 +14,18 @@ python-docx>=1.0.0
 beautifulsoup4>=4.12.0
 chardet>=5.2.0
 
-# ML and AI dependencies
-torch==2.2.2+cpu
+# ML and AI dependencies (CPU-only)
 --extra-index-url https://download.pytorch.org/whl/cpu
-sentence-transformers>=2.2.0
-google-generativeai>=0.8.5
-numpy>=1.24.0
+torch==2.2.2+cpu
+numpy<2.0.0
+transformers>=4.36.0
+sentence-transformers>=2.2.2
 faiss-cpu>=1.7.0
+google-generativeai>=0.8.5
 
 # NLP dependencies
 nltk>=3.8
 
-# Ensure compatibility
+# Build tools (for compiling extensions if needed)
 setuptools>=65.0.0
 wheel>=0.38.0
