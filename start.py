@@ -39,9 +39,10 @@ def main():
             access_log=True,
             loop="asyncio",
             # Railway-specific optimizations
-            timeout_keep_alive=5,
-            limit_concurrency=100,
-            limit_max_requests=1000,
+            timeout_keep_alive=30,
+            limit_concurrency=50,
+            limit_max_requests=500,
+            timeout_graceful_shutdown=30,
         )
         
     except ImportError as e:
